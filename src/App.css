@@ -1,0 +1,48 @@
+/* --- Global Styles --- */
+:root {
+  --primary: #9333ea;
+  --bg-light: #fdf2f8;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --border: #e5e7eb;
+}
+
+/* Dark Mode Variables */
+.dark-theme {
+  --bg-light: #111827;
+  --card-bg: #1f2937;
+  --text-main: #f9fafb;
+  --border: #374151;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  transition: background 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+.card { 
+  background: var(--card-bg); 
+  border: 1px solid var(--border); 
+  border-radius: 16px; 
+  padding: 24px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* --- Priority Colors --- */
+.p-high { border-left: 5px solid #ef4444; }
+.p-medium { border-left: 5px solid #f59e0b; }
+.p-low { border-left: 5px solid #10b981; }
+
+/* --- Circular Timer --- */
+.timer-svg { width: 200px; height: 200px; transform: rotate(-90deg); }
+.circle-bg { fill: none; stroke: var(--border); stroke-width: 8; }
+.circle-progress { 
+  fill: none; stroke: #f43f5e; stroke-width: 8; 
+  stroke-linecap: round; transition: stroke-dashoffset 0.5s ease; 
+}
